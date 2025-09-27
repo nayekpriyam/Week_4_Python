@@ -1,0 +1,9 @@
+def josephus(n, k):
+    people = list(range(1, n+1))
+    idx = 0
+    while len(people) > 1:
+        idx = (idx + k - 1) % len(people)
+        people.pop(idx)
+    return people[0]
+
+print(josephus(7, 3))  
